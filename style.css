@@ -1,87 +1,171 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    position: sticky;
-}
-body {
-    background-color: #121212;
-    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    overflow: auto;
 }
 
 .s1 {
     position: fixed;
-    color: white;
-    margin-bottom: 80px;
-    background-color: black;
-    border: 1px solid black;
-    text-align: left;
-    padding: 25px 0 20px 51px;
     top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: black;
     box-shadow: 0 0 10px 0 grey;
+    z-index: 999;
 }
 
+footer {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    background-color: #f0f0f0;
+    padding: 10px;
+    background-color: black;
+    gap: 20px;
+}
+footer div {
+
+    margin: 0 10px; /* Optional: Add some spacing between items */
+}
+footer div a{
+    font-family: 'poppins';
+    color: white;
+    text-decoration: none;
+}
+
+.s2 {
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    background-color: #1f1e1e;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.s3 {
+    position: relative;
+    max-width: 400px;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+    transition: all ease-in 1s;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 20px;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -12px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 0 50px 0 5px;
+    color: #fff;
+}
+
+#btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgb(255, 255,255, 1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background-color: rgb(255, 255,255, 0.5);
+}
+
+
+* .footer {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    align-items: flex-start /* Center items vertically */
+}
 .sidebar {
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
-    bottom: 0;
+    left: 0;
     width: 200px;
+    height: 100%;
     background-color: black;
-    padding: 24px;
-    /* adjust the sidebar padding */
+    padding: 20px;
 }
 
 .sidebar .logo img {
     width: 140px;
-    /*    top spotify logo*/
 }
 
 .sidebar .navigation ul {
-    /*list-style: none;*/
-    margin-top: 10px;
-    /*    adjust the spacing between logo and list*/
-    /*    entire list in ul*/
+    margin-top: 90px;
+    list-style: none;
 }
 
 .sidebar .navigation ul li {
-    padding: 10px 0px;
-    /*    adjust the spacing between the sidebar list items */
-    /* list items in li */
+    padding: 10px 0;
 }
 
 .sidebar .navigation ul li a {
     color: #b3b3b3;
     text-decoration: none;
-    /*font-weight: 500;*/
     font-size: 18px;
-    /* text size of sidebar settings */
 }
 
 .sidebar .navigation ul li .fa {
     font-size: 20px;
     margin-right: 10px;
-    /* icons in sidebar settings */
-}
-
-.s1 .fa {
-    font-size: 30px;
-    margin-right: 0px;
-    /* icons in sidebar settings */
 }
 
 .sidebar .navigation ul li a:hover {
     color: white;
-    /* change icon colour when hovered */
 }
-
 .sidebar .policies {
     position: absolute;
     bottom: 10px;
@@ -107,126 +191,23 @@ body {
     text-decoration: underline;
 }
 
+
 .main-container {
-    position: fixed;
-    margin-left: 350px;
-    margin-bottom: 100px;
-    margin-top: 100px;
+    margin-left: 200px;
+    margin-top: 90px;
+    padding: 20px;
+    color: rgb(18, 17, 17);
+    background-color: black;
 }
 
-.spotify-playlists {
-    padding: 20px 40px;
-}
-
-.spotify-playlists h2 {
-    color: #ffffff;
-    font-size: 22px;
+.main-container h2 {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.spotify-playlists .list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    overflow: hidden;
-}
-
-.spotify-playlists .list .item {
-    min-width: 140px;
-    width: 160px;
-    padding: 15px;
-    background-color: #181818;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all ease 0.4s;
-}
-
-.spotify-playlists .list .item:hover {
-    background-color: #252525;
-}
 
 
-.spotify-playlists .list .item img {
-    width: 10px;
-    height: 10px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.spotify-playlists .list .item .play {
-    position: relative;
-}
-
-.spotify-playlists .list .item .play .fa {
-    position: absolute;
-    right: 10px;
-    top: -60px;
-    padding: 18px;
-    background-color: #1db954;
-    border-radius: 100%;
-    opacity: 0;
-    transition: all ease 0.4s;
-}
-
-.spotify-playlists .list .item:hover .play .fa {
-    opacity: 1;
-    transform: translateY(-15px);
-}
-
-.spotify-playlists .list .item h4 {
-    color: #ffffff;
-    font-size: 14px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.spotify-playlists .list .item p {
-    color: #989898;
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 500;
-}
-
-.spotify-playlists hr {
-    margin: 70px 0px 0px;
-    border-color: #636363;
-}
-
-.preview {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to right, #ae2896, #509bf5);
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.preview h6 {
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 12px;
-    margin-bottom: 10px;
-}
-
-.preview p {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.preview button {
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 14px 30px;
-    border: 0px;
-    border-radius: 40px;
-    cursor: pointer;
+.text{
+    color: white;
+    font-size: 20px;
 }
