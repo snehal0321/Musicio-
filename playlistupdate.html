@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC.IO</title>
+    <link rel="stylesheet" href="style (1).css">
+    <script>
+    </script>
+</head>
+
+<body>
+<div class="s1">
+    <a href="#">
+        <h1 style="text-align: left;display:inline;">MUSIC.IO</h1>
+        <h3>Made with love</h3>
+    </a>
+</div>
+
+<div class="sidebar">
+
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="../Songs/songview.php">
+                    <span class="fa fa-home"></span>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="../playlist/playlistview.php">
+                    <span class="fa fas fa-book"></span>
+                    <span>Playlist</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Songs/songview.php">
+                    <span class="fa fas fa-book"></span>
+                    <span>Songs</span>
+                </a>
+            </li>
+            <li>
+                <a href="../artist/artistview.php">
+                    <span class="fa fas fa-book"></span>
+                    <span>Artist</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    
+
+</div>
+<div class="main-container">
+    <div class="s2">
+
+        <div class="s3">
+            <form action="playlistupdate.php" method="post" >
+                <h1 style="text-align: left">PLAYLIST UPDATION</h1>
+                <div class="inputbox">
+                    <input type="text" id="P_no" name="P_no" required >
+                    <label>Playlist ID :</label>
+                </div>
+                <div class="inputbox">
+                    <input type="text" id="P_name" name="P_name"  required >
+                    <label>Playlist Name </label>
+                </div>
+                <div class="inputbox">
+                    <input type="text" id="Lang" name="Lang"  required>
+                    <label> Language:</label>
+                </div>
+                <div class="inputbox">
+                    <input type="number" id="Num" name="Num"  required>
+                    <label>No. of Songs:</label>
+                </div>
+                <div class="inputbox">
+                    <input type="text" id="Dur" name="Dur"   required>
+                    <label>Total Duration:</label>
+                </div>
+                
+                <input type="submit" id="btn" value="UPDATE"   required>
+               
+            </form>
+        </div>
+    </div>
+    <div class="policies">
+        <a href="playlisttable.php">
+            <input type="button" id="btn" name="button"    value="SELECT">
+        </a> 
+
+    
+     </div>
+</div>
+
+
+
+</div>
+</body>
+
+</html>
