@@ -51,18 +51,6 @@
                     <span>Artist</span>
                 </a>
             </li>
-            <li>
-                <a href="artistviewop.php">
-                    <span class="fa fas fa-book"></span>
-                    <span>VIEW OPERATION</span>
-                </a>
-            </li>
-            <li>
-                <a href="artist_join_song.php">
-                    <span class="fa fas fa-book"></span>
-                    <span>JOIN OPERATION</span>
-                </a>
-            </li>
         </ul>
     </div>
 
@@ -86,7 +74,7 @@
 
 <div class="main-container">
     <div class="spotify-playlists">
-        <h2>PLAYLIST</h2>
+        <h2>ARTIST</h2>
             <div class="list" id="alllist">
                 <?php
                 $conn=mysqli_connect("localhost","root","","Musicio");
@@ -94,30 +82,24 @@
                 { 
             
                     // Fetching data from the database
-                    $query = "SELECT * FROM artist a 
-                    natural join songs s";
+                    $q1 = "SELECT * FROM Artist";
+                    $result = mysqli_query($conn, $q1);
 
-                    $result = mysqli_query($conn, $query);
                     if ($result && mysqli_num_rows($result) > 0) {
                         echo'<table border="2" >';
                         echo'<tr>';
-                            echo '<th>ANO </th>';
-                            echo '<th>ANAME</th>';
-                            echo '<th>GENRE</th>';
-                            echo '<th>SNO</th>';
-                            echo '<th>SNAME</th>';
-                            echo '<th>Duration</th>';
+                            echo '<th>Artist ID</th>';
+                            echo '<th>Artist Name</th>';
+                            echo '<th>Genre</th>';
+                            echo '<th>Song Id</th>';
                          echo'</tr>';
                         while ($info = mysqli_fetch_array($result)) {
                             echo '<div>';
                                 echo '<tr>';
-                                    echo '<td>' .$info['A_no'] . '</td>';
-                                    echo '<td>'  .$info['A_name']. '</td>';
-                                    echo '<td>'  .$info['Genre']. '</td>';
-                                    echo '<td>' .$info['S_no']. '</td>';
-                                    echo '<td>' .$info['S_name']. '</td>';
-                                    echo '<td>' .$info["dur"]. '</td>';
-                                   
+                                    echo '<td>' .$info["A_no"] . '</td>';
+                                    echo '<td>' .$info["A_name"]. '</td>';
+                                    echo '<td>' .$info["Genre"]. '</td>';
+                                    echo '<td>' .$info["S_no"]. '</td>';
                                 echo '</tr>';
                             // You can format and display other columns similarly
                             echo '</div>'; // Close the 'item' div for each song
@@ -134,10 +116,21 @@
                 ?>
             </div>
     </div>
+
+    <div class="opt">
+        <a href="artistinsert.html">
+         <input type="button" id="btn" name="button"    value="INSERT">
+        </a> 
+        <a href="artistDel.html">
+            <input type="button" id="btn" name="button"    value="DELETE">
+        </a> 
+        <a href="artistUpdate.html">
+            <input type="button" id="btn" name="button"    value="UPDATE">
+        </a> 
+    
+     </div>
 </div>
 
 </body>
 
 </html>
-
-

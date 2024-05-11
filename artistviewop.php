@@ -28,12 +28,6 @@
                 </a>
             </li>
             <li>
-                <a href="../login/adminlogin.php">
-                    <span class="fa fa-user"></span>
-                    <span>Admin</span>
-                </a>
-            </li>
-            <li>
                 <a href="../playlist/playlistview.php">
                     <span class="fa fas fa-book"></span>
                     <span>Playlist</span>
